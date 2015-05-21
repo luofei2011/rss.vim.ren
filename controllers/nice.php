@@ -27,6 +27,7 @@ Class Nice extends Controller {
         $this->load_view('head', array (
             'title' => '首页',
             'head_title' => '首页',
+            'need_back' => false
         ));
         $this->load_view('index', $data);
         $this->load_view('foot');
@@ -36,6 +37,7 @@ Class Nice extends Controller {
         $this->load_view('head', array (
             'title' => '添加记录',
             'head_title' => '添加记录',
+            'need_back' => true
         ));
         $this->load_view('add');
         $this->load_view('foot');
@@ -45,6 +47,7 @@ Class Nice extends Controller {
         $this->load_view('head', array (
             'title' => '搜索记录',
             'head_title' => '搜索记录',
+            'need_back' => true
         ));
         $this->load_view('search');
         $this->load_view('foot');
@@ -72,6 +75,7 @@ Class Nice extends Controller {
         $this->load_view('head', array (
             'title' => '登录',
             'head_title' => '登录',
+            'need_back' => true
         ));
         $this->load_view('login');
         $this->load_view('foot');
