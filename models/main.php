@@ -12,7 +12,7 @@ Class Main extends Model {
     }
 
     public function is_user_exist($username, $password)  {
-    	$query = "SELECT * FROM `user` WHERE username='$username' OR email='$username' AND password='$password'";
+    	$query = "SELECT * FROM `user` WHERE username='$username' OR email='$username' AND pwd='$password'";
         $result = $this->query($query);
 
         return $result;

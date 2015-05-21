@@ -2,5 +2,5 @@ node_modules
 *.swp
 *.~
 
-config.php
+./config.php
 ./models/model.php
