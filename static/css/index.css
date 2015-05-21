@@ -1,0 +1,154 @@
+header{
+    position: relative;
+	height: 5rem;
+    line-height: 5rem;
+	background-color: #1abc9c;
+	vertical-align: middle;
+}
+header i{
+    position: absolute;
+	display: inline-block;
+	width: 3.125rem;
+	height: 3.125rem;
+	border-radius: 50%;
+	overflow: hidden;
+	background-image: url(../img/1.jpeg);
+	background-position: 50% 50%;
+    top: 50%;
+    left: 1.2rem;
+    transform: translate3d(0, -50%, 0);
+    -webkit-transform: translate3d(0, -50%, 0);
+}
+header h1{
+    font-size: 2.25rem;
+	color: #fff;
+	text-align: center;
+}
+section{
+	padding: 2.5rem 1.2rem 0 1.2rem;
+}
+.contr-btn .btn{
+    display: block;
+	background-color: #1abc9c;
+    height: 4rem;
+    line-height: 4rem;
+	margin-top: 5.3125rem;
+    font-size: 1.8rem;
+	color: #fff;
+	text-align: center;
+    text-decoration: none;
+}
+.add h1{
+	text-align: center;
+	color: #839F99;
+	font:normal 2.25rem/5rem "Microsoft YaHei",Serif;
+}
+.add form div{
+	margin-top: 1.25rem;
+	font:normal 2.25rem/1.25rem "Microsoft YaHei",Serif;
+	color: #fff;
+	text-align: center;
+}
+.add form div input[type="text"]{
+    height: 3rem;
+    line-height: 3rem;
+	width: 100%;
+	border: 0;
+	border-bottom: solid 1px #ccc;
+	outline: 0;
+	font-size:1.8rem;
+    padding: 3px 6px;
+    border-radius: 5px;
+}
+.add form div textarea{
+	width: 100%;
+	line-height: 1rem;
+	outline: 0;
+	font-size:1.8rem;
+    padding: 6px 6px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+.add-btn-group {
+    display: box;
+    display: -webkit-box;
+    display: -moz-box;
+}
+.add-btn-group input {
+    display: block;
+	background-color: #1abc9c;
+    cursor: pointer;
+    outline: none;
+    border: 0 none;
+    height: 4rem;
+    line-height: 4rem;
+    font-size: 1.8rem;
+    border-radius: 0;
+    color: #fff;
+
+    box-flex: 1;
+    -webkit-box-flex: 1;
+    -moz-box-flex: 1;
+
+    &:last-child {
+        margin-left: 1px;
+    }
+}
+.seach h1{
+	height: 2.5rem;
+	position: relative;
+}
+.seach h1 input{
+	width: 100%;
+	line-height: 1.625rem;
+	border: 0;
+	border-bottom: solid 1px #ccc;
+	outline: 0;
+	float: left;
+	margin-top: 7px;
+	border-color: #1abd9d;
+	font-size:1.8rem
+}
+.seach h1 i{
+	display: inline-block;
+	width: 2.5rem;
+	height: 2.5rem;
+	position: absolute;
+	top: 2px;right: 0;
+	background-image: url(../img/search.png);
+	background-size: 100%
+}
+.seach article{
+	margin-top: 20px;
+	border: solid 1px #ccc;
+	padding: 10px;
+}
+.seach article h3 a{
+	font:normal 1.5rem/1.25rem "Microsoft YaHei",Serif;
+	text-decoration: none;
+	color: #1abc9c
+}
+.seach article .label span{
+	display: inline-block;
+	width: 5.75rem;
+	font:normal 1rem/1.25rem "Microsoft YaHei",Serif;
+	background: #ffae23;
+	text-align: center;
+	color: #fff;
+	padding: 2px;
+	margin-top: 5px;
+}
+.seach .descript{
+	font:normal 1rem/1.25rem "Microsoft YaHei",Serif;
+	color: #ccc;
+	padding-top: 5px;
+}
+.loading{
+	position: absolute;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+	margin: auto;
+	display: none;
+}
