@@ -41,6 +41,10 @@ $(function () {
 
                 if (data.status === 200) {
                     var list = data.data;
+                    if (Object.prototype.toString.call(list) === '[object Object]') {
+                        list = [list];
+                    }
+
                     for (var i = 0, len = list.length; i < len; i++) {
                         html += '<article class="item"><h3>' +
                                 '<a href="' + list[i].url + '">' + list[i].title + '</a></h3>' +
