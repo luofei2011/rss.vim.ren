@@ -94,10 +94,9 @@ section{
     box-flex: 1;
     -webkit-box-flex: 1;
     -moz-box-flex: 1;
-
-    &:last-child {
-        margin-left: 1px;
-    }
+}
+.add-btn-group input:last-child {
+    margin-left: 2px;
 }
 .seach h1{
 	height: 2.5rem;
