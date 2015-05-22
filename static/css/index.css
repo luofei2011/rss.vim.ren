@@ -112,7 +112,7 @@ section{
 	float: left;
 	margin-top: 7px;
 	border-color: #1abd9d;
-	font-size:1.8rem
+	font-size:1.8rem;
 }
 .seach h1 i{
 	display: inline-block;
@@ -121,7 +121,8 @@ section{
 	position: absolute;
 	top: 2px;right: 0;
 	background-image: url(../img/search.png);
-	background-size: 100%
+	background-size: 100%;
+    cursor: pointer;
 }
 .seach article{
 	margin-top: 20px;
@@ -131,7 +132,7 @@ section{
 .seach article h3 a{
 	font:normal 1.5rem/1.25rem "Microsoft YaHei",Serif;
 	text-decoration: none;
-	color: #1abc9c
+	color: #1abc9c;
 }
 .seach article .label span{
 	display: inline-block;
