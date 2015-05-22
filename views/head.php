@@ -13,7 +13,9 @@
 <body>
 	<header>
         <?php if (!$need_back) {?>
-		<i class="user-head"></i>
+        <a href="<?php echo BASE_URL . '?f=user_login';?>">
+		    <i class="user-head"></i>
+        </a>
         <?php } else {?>
         <a href="<?php echo BASE_URL;?>" class="back">
             <i class="icon-left-open-big"></i>

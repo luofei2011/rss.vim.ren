@@ -72,6 +72,11 @@ Class Nice extends Controller {
     }
 
     public function user_login() {
+        if ($this->isLogin) {
+            $this->index();
+            return;
+        }
+
         $this->load_view('head', array (
             'title' => '登录',
             'head_title' => '登录',
