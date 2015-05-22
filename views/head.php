@@ -14,11 +14,11 @@
 	<header>
         <?php if (!$need_back) {?>
         <a href="<?php echo BASE_URL . '?f=user_login';?>">
-		    <i class="user-head"></i>
+		    <i class="user-head">E</i>
         </a>
         <?php } else {?>
         <a href="<?php echo BASE_URL;?>" class="back">
-            <i class="icon-left-open-big">E</i>
+            <i class="icon-left-open-big"></i>
         </a>
         <?php }?>
         <h1><?php echo $head_title;?></h1>
