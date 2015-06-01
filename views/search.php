@@ -31,7 +31,7 @@ $(function () {
             type: 'get',
             data: {kw: kw},
             beforeSend:function(){
-               $loadimg.css("display","block")
+                $loadimg.css("display","block")
             },
             success: function (data) {
                 $loadimg.css("display","none")
@@ -47,10 +47,11 @@ $(function () {
 
                     for (var i = 0, len = list.length; i < len; i++) {
                         html += '<article class="item"><h3>' +
-                                '<a href="' + list[i].url + '">' + list[i].title + '</a></h3>' +
-                                '<p class="label">标签：' + list[i].tags + '</p>' +
-                                '<p class="descript">描述：' + list[i].description + '</p>' +
-                                '</article>';
+                            '<a href="' + list[i].url + '">' + list[i].title + '</a></h3>' +
+                            '<p class="descript">' + list[i].date + '</p>' +
+                            '<p class="label">标签：' + list[i].tags + '</p>' +
+                            '<p class="descript">描述：' + list[i].description + '</p>' +
+                            '</article>';
                     }
                 } else if (data.status === 302) {
                     RSS.router(data.url);

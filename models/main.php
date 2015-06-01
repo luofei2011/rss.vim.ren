@@ -1,5 +1,5 @@
 <?php
-date_default_timezone_set("PRC");
+date_default_timezone_set("Asia/Shanghai");
 Class Main extends Model {
     public function get_user_id($username) {
         $result = $this->query("SELECT id FROM `user` WHERE username='$username' or email='$username'");
@@ -34,8 +34,9 @@ Class Main extends Model {
         $url = $post['url'];
         $tags = $post['tags'];
         $des = $post['description'];
+        $now = date('Y-m-d H:i:s');
 
-        $query = "INSERT INTO `rss` values('', '$uid', '$title', '$url', '$tags', '$des')";
+        $query = "INSERT INTO `rss` values('', '$uid', '$title', '$url', '$tags', '$des', '$now')";
 
         return $this->query($query);
     }
