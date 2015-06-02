@@ -42,12 +42,18 @@ Class Main extends Model {
     }
 
     public function search($uid, $kw) {
-	    $query = "SELECT * FROM `rss` WHERE uid='$uid' and title LIKE '%$kw%' or tags LIKE '%$kw%' or description LIKE '%$kw%'";
+	    $query = "SELECT * FROM `rss` WHERE uid='$uid' and (title LIKE '%$kw%' or tags LIKE '%$kw%' or description LIKE '%$kw%')";
 
         $result = $this->query($query);
         $result = is_array($result) ? $result : array();
 
         return $result;
+    }
+
+    public function del_from_rss($uid, $id) {
+        $query = "DELETE FROM `rss` WHERE uid='$uid' and id='$id'";
+
+        return $this->query($query);
     }
 
     public function insert_into_item($data, $uid) {

@@ -101,11 +101,11 @@ section{
 .add-btn-group input:last-child {
     margin-left: 2px;
 }
-.seach h1{
+.search h1{
 	height: 2.5rem;
 	position: relative;
 }
-.seach h1 input{
+.search h1 input{
 	width: 100%;
 	line-height: 1.625rem;
 	border: 0;
@@ -116,7 +116,7 @@ section{
 	border-color: #1abd9d;
 	font-size:1.8rem;
 }
-.seach h1 i{
+.search h1 i{
 	display: inline-block;
 	width: 2.5rem;
 	height: 2.5rem;
@@ -126,17 +126,30 @@ section{
 	background-size: 100%;
     cursor: pointer;
 }
-.seach article{
+.search article{
+    position: relative;
 	margin-top: 20px;
 	border: solid 1px #ccc;
 	padding: 10px;
 }
-.seach article h3 a{
+.search article .delete-btn {
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 24px;
+    height: 24px;
+    background: url(../img/public-icon-close.png) no-repeat;
+    background-size: 24px 24px;
+}
+.search.mobile article .delete-btn {
+    display: none;
+}
+.search article h3 a{
 	font:normal 1.5rem/1.25rem "Microsoft YaHei",Serif;
 	text-decoration: none;
 	color: #1abc9c;
 }
-.seach article .label span{
+.search article .label span{
 	display: inline-block;
 	width: 5.75rem;
 	font:normal 1rem/1.25rem "Microsoft YaHei",Serif;
@@ -146,7 +159,7 @@ section{
 	padding: 2px;
 	margin-top: 5px;
 }
-.seach .descript{
+.search .descript{
 	font:normal 1rem/1.25rem "Microsoft YaHei",Serif;
 	color: #ccc;
 	padding-top: 5px;

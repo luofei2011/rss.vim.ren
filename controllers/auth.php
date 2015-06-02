@@ -45,6 +45,18 @@ class Auth extends Controller {
         ));
     }
 
+    public function del_rss() {
+        if (!$this->auth()) return;
+
+        $id = $_POST['id'];
+        $return = $this->main->del_from_rss($this->uid, $id);
+
+        echo json_encode(array(
+            'status' => 200,
+            'msg' => 'success'
+        ));
+    }
+
     private function auth() {
         if (!$this->isLogin) {
             // 判断是否为ajax请求
