@@ -1,6 +1,6 @@
 <section class="search">
     <h1>
-        <form action="<?php echo BASE_URL . '?c=auth&f=search';?>">
+        <form action="<?php echo BASE_URL . '?c=auth&f=search';?>" method="get">
             <input type="text"  name="kw" id="kw" placeholder="关键字">
             <i class="search-btn" id="searchSubmit"></i>
         </form>
@@ -53,6 +53,10 @@ $(function () {
         });
 
         e.preventDefault();
+        return false;
+    });
+    $('form').on('submit', function () {
+        $('#searchSubmit').trigger('click');
         return false;
     });
 

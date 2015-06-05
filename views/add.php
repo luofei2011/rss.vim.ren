@@ -26,6 +26,12 @@
 $(function () {
     var $addBtn = $('#addSubmit');
     var $loadimg = $(".loading")
+
+    $('form').on('submit', function () {
+        $addBtn.trigger('click');
+        return false;
+    });
+
     $addBtn.on('click', function (event) {
         var $form = $(this).closest('form');
         var url = $form.attr('action');
