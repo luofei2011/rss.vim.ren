@@ -12,14 +12,17 @@
 </head>
 <body>
 	<header>
-        <?php if (!$need_back) {?>
+        <?php if (!$need_back) { ?>
         <a href="<?php echo BASE_URL . '?f=user_login';?>">
 		    <i class="user-head">E</i>
         </a>
-        <?php } else {?>
+        <?php } else { ?>
         <a href="<?php echo BASE_URL;?>" class="back">
             <i class="icon-left-open-big"></i>
         </a>
-        <?php }?>
+        <?php } ?>
         <h1><?php echo $head_title;?></h1>
+        <?php if (isset($rightNav)) {?>
+        <a href="<?php echo $rightNav['url'];?>" class="header-nav-right"><?php echo $rightNav['label'];?></a>
+        <?php } ?>
 	</header>
