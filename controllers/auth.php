@@ -57,6 +57,16 @@ class Auth extends Controller {
         ));
     }
 
+    public function update_rss() {
+        if (!$this->auth()) return;
+        $result = $this->main->update_rss($this->uid, $_POST);
+
+        echo json_encode(array(
+            'status' => 302,
+            'url' => BASE_URL . '?f=search'
+        ));
+    }
+
     private function auth() {
         if (!$this->isLogin) {
             // 判断是否为ajax请求

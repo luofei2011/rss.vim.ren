@@ -56,6 +56,22 @@ Class Main extends Model {
         return $this->query($query);
     }
 
+    public function update_rss($uid, $post) {
+        $id = $post['id'];
+        $title = $post['title'];
+        $url = $post['url'];
+        $tags = $post['tags'];
+        $des = $post['description'];
+
+        $query = "UPDATE `rss` set title='$title', url='$url', tags='$tags', description='$des' WHERE id='$id' && uid='$uid'";
+        return $this->query($query);
+    }
+
+    public function get_signal_rss($uid, $id) {
+        $query = "SELECT * FROM `rss` WHERE uid='$uid' and id='$id'";
+        return $this->query($query);
+    }
+
     public function insert_into_item($data, $uid) {
         $name = $data['itemName'];
         $unit = $data['itemUnit'];

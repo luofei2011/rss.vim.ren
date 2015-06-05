@@ -92,6 +92,7 @@ $(function () {
                         html += '<article class="item"><h3>' +
                             '<a href="' + list[i].url + '">' + list[i].title + '</a></h3>' +
                             '<a href="javascript:void(0);" class="delete-btn" data-id="' + list[i].id + '"></a>' +
+                            '<a href="/?f=add&isupdate=1&id=' + list[i].id + '" class="edit-btn" target="_self"></a>' +
                             '<p class="descript">' + list[i].date + '</p>' +
                             '<p class="label">标签：' + list[i].tags + '</p>' +
                             '<p class="descript">描述：' + list[i].description + '</p>' +

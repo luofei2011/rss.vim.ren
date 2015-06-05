@@ -34,6 +34,15 @@ Class Nice extends Controller {
     }
 
     public function add() {
+        $data = array();
+        if ($this->isLogin) {
+            $isUpdate = $_GET['isupdate'];
+            $updateId = $_GET['id'];
+            if ($updateId) {
+                $data['isUpdate'] = $isUpdate;
+                $data['data'] = $this->main->get_signal_rss($this->uid, $updateId);
+            }
+        }
         $this->load_view('head', array (
             'title' => '添加记录',
             'head_title' => '添加记录',
@@ -43,7 +52,7 @@ Class Nice extends Controller {
                 'label' => '搜索'
             )
         ));
-        $this->load_view('add');
+        $this->load_view('add', $data);
         $this->load_view('foot');
     }
 

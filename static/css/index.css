@@ -152,6 +152,15 @@ section{
     background: url(../img/public-icon-close.png) no-repeat;
     background-size: 24px 24px;
 }
+.search article .edit-btn {
+    position: absolute;
+    right: 10px;
+    bottom: 10px;
+    width: 20px;
+    height: 20px;
+    background: url(../img/public-icon-edit.png) no-repeat;
+    background-size: 20px 20px;
+}
 .search.mobile article .delete-btn {
     display: none;
 }
