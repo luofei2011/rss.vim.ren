@@ -52,7 +52,7 @@ $(function () {
                     if (data.status === 200) {
                         if (data.msg == 'success') {
                             alert('添加成功！');
-                            $form.reset();
+                            $form[0].reset();
                         } else {
                             alert('添加失败,再来一次。');
                         }
