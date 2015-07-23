@@ -19,6 +19,10 @@ Class Nice extends Controller {
     }
 
     public function index() {
+		if (!$this->isLogin) {
+			header('Location: ' . BASE_URL . '?f=user_login');
+		}
+
         $data = array();
         $data['userInfo'] = array(
             'isLogin' => $this->isLogin,
@@ -90,7 +94,7 @@ Class Nice extends Controller {
 
     public function user_login() {
         if ($this->isLogin) {
-            $this->index();
+			header('Location: ' . BASE_URL);
             return;
         }
 
