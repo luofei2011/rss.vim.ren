@@ -72,6 +72,11 @@ Class Main extends Model {
         return $this->query($query);
     }
 
+    public function get_all_record($uid = 2) {
+        $query = "SELECT * FROM `rss` WHERE uid='$uid' order by `date` desc";
+        return $this->query($query);
+    }
+
     public function insert_into_item($data, $uid) {
         $name = $data['itemName'];
         $unit = $data['itemUnit'];

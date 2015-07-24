@@ -18,7 +18,7 @@ Class Nice extends Controller {
             $this->uid = $result['id'];
     }
 
-    public function index() {
+    public function index_old() {
 		if (!$this->isLogin) {
 			header('Location: ' . BASE_URL . '?f=user_login');
 		}
@@ -33,7 +33,23 @@ Class Nice extends Controller {
             'head_title' => '首页',
             'need_back' => false
         ));
-        $this->load_view('index', $data);
+        $this->load_view('index_old', $data);
+        $this->load_view('foot');
+    }
+
+    public function index() {
+        $result = $this->main->get_all_record();
+        $this->load_view('head', array (
+            'title' => '首页',
+            'header_title' => '所有记录',
+            'need_back' => false,
+            'rightNav' => array (
+                'url' => '/?f=index_old',
+                'label' => '更多',
+            ),
+        ));
+
+        $this->load_view('index', array ('results' => $result));
         $this->load_view('foot');
     }
 

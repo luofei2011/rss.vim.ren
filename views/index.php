@@ -1,4 +1,16 @@
-<section class="contr-btn">
-    <a href="<?php echo BASE_URL . '?f=add';?>"class="btn addbtn">添加记录</div>
-    <a href="<?php echo BASE_URL . '?f=search';?>" class="btn seachbtn">搜索记录</div>
+<section class="search">
+<?php
+foreach ($results as $result) {
+?>
+<article class="item">
+    <h3>
+        <a href="<?php echo $result['url'];?>"><?php echo $result['title'];?></a>
+    </h3>
+    <p class="descript"><?php echo $result['date'];?></p>
+    <p class="label"><?php echo $result['tags'];?></p>
+    <p class="descript"><?php echo $result['description'];?></p>
+</article>
+<?php
+}
+?>
 </section>
