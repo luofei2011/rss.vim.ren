@@ -41,7 +41,7 @@ Class Nice extends Controller {
         $result = $this->main->get_all_record();
         $this->load_view('head', array (
             'title' => '首页',
-            'header_title' => '所有记录',
+            'head_title' => '所有记录',
             'need_back' => false,
             'rightNav' => array (
                 'url' => '/?f=index_old',
